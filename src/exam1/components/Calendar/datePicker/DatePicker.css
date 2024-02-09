@@ -1,0 +1,34 @@
+/* styles.css */
+
+.show-calender {
+  
+  /* top: 100%;
+  margin-top: 14px;
+  z-index: 50; */
+  transition: all 0.5s ease;
+  animation: slide-down 0.3s ease;
+}
+
+.show-calender{
+  animation: slide-up 0.5s ease;
+}
+
+
+
+/* @keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+} */

@@ -1,0 +1,100 @@
+.date-Table{
+    height: 261px;
+    width: 320px;
+    background-color: 'rgba(200,200,200,0.3)',
+}
+
+.days{
+    height: 13px;
+    width: 288px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 8px;
+}
+
+.day{
+    height: 13px;
+    width: 36px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 13px;
+    color: #929292;
+}
+
+.dates {
+    height: 216px;
+    width: 288px;
+    margin: auto;
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    justify-content: space-between;
+    font-size: 14px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 143%; 
+    letter-spacing: 0.15px;
+}
+
+.date{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.date-today{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: #00A3FF 1px solid;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.date-selected {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 50%;
+    background-color: #00A3FF;
+    cursor: pointer;
+}
+
+.date:hover {
+    color: #181818;
+    background-color: white;
+    transition:0.3s;
+}
+
+.year:focus{
+    background-color: #00A3FF;
+    transition:0.3s;
+}
+
+
+.date-Pre-Next {
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+} 

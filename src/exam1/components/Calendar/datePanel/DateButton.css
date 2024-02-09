@@ -1,0 +1,41 @@
+.button-cancel {
+    height: 40px;
+    width: 80px;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    color: white;
+    background-color: #1B1B1B;
+    border: none;
+    border-radius: 3px;
+    margin: 0px 36px 0px 122px;
+    cursor: pointer;
+  }
+
+  .button-cancel:hover {
+    color: #1B1B1B;
+    background-color: white;
+    transition: 0.3s;
+  }
+  
+  .button-OK {
+    height: 40px;
+    width: 53px;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    background-color: #1B1B1B;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .button-OK:hover {
+    background-color: #00A3FF;
+    transition: 0.3s;
+  }

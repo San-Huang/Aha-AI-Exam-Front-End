@@ -1,0 +1,54 @@
+.years-table{
+    height: 212px;
+    width: 271px;
+    padding: 18px 0px 31px 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+}
+
+.year{
+    height: 24px;
+    width: 61px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.year-select{
+    height: 24px;
+    width: 61px;
+    display: flex;
+    color: white;
+    background-color: #00A3FF;
+    justify-content: center;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.year:hover {
+    color: #181818;
+    background-color: white;
+    transition:0.3s;
+}
+
+.year:focus{
+    background-color: #00A3FF;
+    transition:0.3s;
+}

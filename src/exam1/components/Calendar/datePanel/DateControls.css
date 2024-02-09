@@ -1,0 +1,56 @@
+.control {
+    height: 48px;
+    width: 320px;
+    color: white;
+    padding-top: 4px;
+    display: flex;
+}
+
+.button-container {
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-button {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    fill: white;
+    border-radius: 3px;
+    transition: 0.2s;
+  }
+  
+.control-button:hover {
+    background-color: white;
+    transition: 0.2s;
+}
+
+.arrow {
+    fill: white;
+    transition: 0.2s;
+}
+
+.arrow:hover {
+    fill: black;
+}
+
+.month-year {
+    height: 24px;
+    width: 140px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    margin: auto;
+    padding: 9px 0 15px 0;
+    cursor: pointer;
+}
+
+.month-year:hover {
+    color: #00A3FF;
+
+}
