@@ -49,11 +49,9 @@ const textStyle: React.CSSProperties = {
 }
 const ResultsCardStyle = {
     width: '725px',
-    height: '100%',
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridGap: '31px 34px',
-
 }
 
 const [results, setResults] = useState<Users[]>([]);
@@ -97,11 +95,11 @@ const handleClick = () => {
                     <span style={textStyle}>Results</span>
                 </div>
                 <div style={ResultsCardStyle}>
-                {results.map((result)=>( 
-                    <ResultCard name={result.name} username={result.username} avater={result.avater}/>
-                    ))}
-                </div>
-                {loading ? (<Loading />) : ''}
+                    {results.map((result)=>( 
+                        <ResultCard name={result.name} username={result.username} avater={result.avater}/>
+                        ))}
+                    </div>
+                    {loading ? (<Loading />) : ''}
                 <MoreButton onClick={handleClick}/>
             </span>
         </div>

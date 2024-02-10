@@ -13,7 +13,7 @@ type Props = {
   return (
     <div style={{
             height: '72px',
-            width: '156px',
+            width: '100%',
             color:'white',
             fontFamily: 'Inter',
             fontStyle: 'normal',

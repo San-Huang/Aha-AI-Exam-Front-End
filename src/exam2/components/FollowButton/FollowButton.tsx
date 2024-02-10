@@ -5,7 +5,7 @@ const FollowButton = () => {
     const FollowButtonStyle = {
         backgroundColor: 'rgba(18, 18, 18, 1)',
         color: 'white',
-        // width:'2px',
+        minWidth:'59px',
         height: '29px',
         padding:'0px',
         border: '1px solid white',

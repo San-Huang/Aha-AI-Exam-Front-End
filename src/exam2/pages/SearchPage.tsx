@@ -73,7 +73,7 @@ const textResultsStyle = {
                         <span style={textResultsStyle}>results</span>
                     </div>
                 <ResultsSlider pageSize={pageSize} setPageSize={setPageSize}/>
-                <Link to={`/exam2/result?pageSize=${pageSize}&keyword=${keyword}`} >
+                <Link to={`/exam2/result?pageSize=${pageSize}&keyword=${keyword}`} style={{ textDecoration: 'none' }}>
                     <SearchButton />
                 </Link>
             </span>
