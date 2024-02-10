@@ -21,12 +21,13 @@ type Props = {
       fontSize:'40px',
       fontWeight:'700',
       letterSpacing:'-1.5px',
+      
     }
-    const passwordFieldStyle = {
+    const birthdayFieldStyle = {
       marginTop: '50px',
       input: { 
         color: 'white',
-        padding:'13px 9px',
+        padding:'2px 9px 0px 12px',
         fontFamily: 'Ubuntu',
         fontSize:'16px',
         fontStyle:'normal',
@@ -36,7 +37,7 @@ type Props = {
       },
       '& .MuiOutlinedInput-root': {
         width: '335px',
-        height: '58px',
+        height: '57px',
         backgroundColor:'none',
         '& fieldset': {
           border: '3px solid rgba(255, 255, 255, 0.50)',
@@ -53,17 +54,21 @@ type Props = {
       },
       '& input::placeholder': {
         color: 'rgba(255, 255, 255, 0.5)',
+        padding: '0px 0px 0px 3px',
       },
     }
-    const passwordLabelStyle = {
+    const birthdayLabelStyle = {
       shrink: true,
       style: {
         color: 'white',
         fontFamily: 'Ubuntu',
         marginLeft:'2px',
+        fontWeight: '400',
+        lineHeight: '18px',
+        letterSpacing: '0.4px',
+        marginTop: '3px',
       },
     }
-
 
       const onFocus = () => {
         setPickerVisible(true);
@@ -96,11 +101,11 @@ type Props = {
           
           <TextField
             id="outlined-password-input"
-            label="Birthday"
+            label="Birthday&nbsp;"
             type="Text"
             placeholder="mm/dd/yyyy"
-            sx={passwordFieldStyle}
-            InputLabelProps={passwordLabelStyle}
+            sx={birthdayFieldStyle}
+            InputLabelProps={birthdayLabelStyle}
             onFocus={onFocus}
             InputProps={{ readOnly: true }}
             value={currentDate && showDate(currentDate)}

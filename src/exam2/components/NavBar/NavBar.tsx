@@ -54,13 +54,13 @@ const HomeIconStyle = {
 }
 
 const TagIconStyle = {
-    padding: '18px 0px 0px 0px',
+    padding: '15px 0px 0px 0px',
 }
 
 const TagDotIconStyle = {
     position: 'absolute' as 'absolute',
-    top: '4px',
-    right: '-4px',
+    top: '1px',
+    right: '-5px',
 }
 
 return(

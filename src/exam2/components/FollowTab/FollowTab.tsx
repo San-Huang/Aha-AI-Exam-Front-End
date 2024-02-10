@@ -24,20 +24,21 @@ const FollowTab:FC<FollowTabProps> = () => {
     }
 
     const TabsStyle ={
-        padding:'32px 0px',
+        padding:'16px 0px  32px 0px',
         '& .MuiTabs-indicator': {
             backgroundColor: '#fff',
         },
     }
     const TabStyle = {
         width: '187px',
-        height: '2px',
+        height: '33px',
+        padding: '5px 0px 0px 0px',
         fontFamily: 'Ubuntu',
         fontSize: '16px',
         fontStyle: 'normal',
-        fontWeight: '400',
-        lineHeight: '150%',
-        letterSpacing: '0.15px',
+        fontWeight: '700',
+        lineHeight: '24px',
+        letterSpacing: '0.35px',
         textTransform: 'none',
         color: 'rgba(146, 146, 146, 0.87)',
         '&.Mui-selected': {

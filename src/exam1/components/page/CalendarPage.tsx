@@ -19,7 +19,7 @@ const CalendarPage = () => {
         <Typography sx={passwordTitleStyle}>
             Calendar
         </Typography>
-        <Calendar />
+        <Calendar title={'Text'}/>
         </>
     )
 }

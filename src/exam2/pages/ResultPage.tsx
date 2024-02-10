@@ -27,8 +27,8 @@ const ResultStyle = {
     display:'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '92px',
-    marginLeft: '-40px',
+    marginTop: '94px',
+    marginLeft: '-44px',
     paddingBottom: '24px'
 }
 const leftArrowStyle = {

@@ -26,8 +26,8 @@ export const Password = () => {
         letterSpacing:'0.15px',
       },
       '& .MuiOutlinedInput-root': {
-        width: '335px',
-        height: '58px',
+        width: '334px',
+        height: '57px',
         backgroundColor:'none',
         '& fieldset': {
           border: '3px solid rgba(255, 255, 255, 0.50)',
@@ -52,6 +52,10 @@ export const Password = () => {
         color: 'white',
         fontFamily: 'Ubuntu',
         marginLeft:'2px',
+        fontWeight: '400',
+        lineHeight: '18px',
+        letterSpacing: '0.4px',
+        marginTop: '3px',
       },
     }
 

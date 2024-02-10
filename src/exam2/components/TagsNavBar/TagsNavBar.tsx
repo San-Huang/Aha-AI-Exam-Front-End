@@ -39,7 +39,7 @@ const LogoIconStyle = {
 }
 
 const HomeIconStyle = {
-    padding: '9px 16px 42px 16px',
+    padding: '9px 16px 40px 16px',
 }
 
 const TagIconStyle = {
@@ -55,6 +55,10 @@ const TagIconStyle = {
     letterSpacing: '0.4px',
     color: 'white',
     padding: '0px 16px',
+}
+
+const TagTextStyle = {
+    marginTop: '-3px',
 }
 
 
@@ -76,7 +80,7 @@ return(
                 <Link to='/exam2/tags' style={{ textDecoration: 'none' }}>
                     <MenuItem  sx={TagIconStyle} disableRipple>
                         <span>{HomeIcon}</span>
-                        <span>Tags</span>
+                        <span style={TagTextStyle}>Tags</span>
                     </MenuItem>
                 </Link>
             </MenuList>

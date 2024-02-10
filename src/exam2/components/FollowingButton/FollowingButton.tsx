@@ -5,9 +5,9 @@ const FollowingButton = () => {
     const FollowingButtonStyle = {
         backgroundColor: 'white',
         color: 'rgba(18, 18, 18, 1)',
-        width:'84px',
-        height: '31px',
-        padding:'8px 10px',
+        width:'76px',
+        height: '28px',
+        padding:'1px 0px 0px 0px',
         border: '1px solid white',
         borderRadius: '20px',
         fontFamily: 'Open Sans',
@@ -15,6 +15,7 @@ const FollowingButton = () => {
         fontStyle: 'normal',
         fontWeight: '600',
         lineHeight: '100%', 
+        letterSpacing: '0.2px',
         textTransform: 'capitalize',
         transition: '0.3s', 
         '&:hover': {

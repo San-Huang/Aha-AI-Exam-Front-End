@@ -9,7 +9,7 @@ import { Typography, TextField, Divider } from '@mui/material';
       fontSize:'24px',
       fontStyle: 'normal',
       fontWeight:'400',
-      letterSpacing:'-1.5px',
+      letterSpacing:'0px',
       lineHeight: '150%',
       textTransform: 'capitalize',
     }

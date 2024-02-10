@@ -18,8 +18,8 @@ const ResultsSlider  = ({ pageSize, setPageSize }: any) => {
       display: 'none',
     },
     '& .MuiSlider-thumb': {
-      width:' 20px',
-      height: '20px',
+      width:' 26px',
+      height: '26px',
       backgroundColor: '#1B1B1B',
       border:'6px solid #FFD05D'
     },
@@ -39,6 +39,7 @@ const ResultsSlider  = ({ pageSize, setPageSize }: any) => {
     fontWeight: '500',
     lineHeight: '150%', 
     letterSpacing: '0.15px',
+    marginTop: '5px',
   }
   const dividerStyle = {
     width: '725px',
@@ -57,15 +58,15 @@ const ResultsSlider  = ({ pageSize, setPageSize }: any) => {
 
   const range = [
     { value: 0.5, label: <Typography>3</Typography> },
-    { value: 17.3, label: <Typography>6</Typography> },
-    { value: 36, label: <Typography>9</Typography> },
-    { value: 54.8, label: <Typography>12</Typography> },
-    { value: 73.6, label: <Typography>15</Typography> },
-    { value: 99, label: <Typography>50</Typography> },
+    { value: 18.9, label: <Typography>6</Typography> },
+    { value: 37.4, label: <Typography>9</Typography> },
+    { value: 56.5, label: <Typography>12</Typography> },
+    { value: 75.2, label: <Typography>15</Typography> },
+    { value: 99.3, label: <Typography>50</Typography> },
   ]
 
 
-  const [value, setValue] = useState(73.6);
+  const [value, setValue] = useState(75.2);
   const [marks, setMarks] = useState(range);
   
   const handleChange = ( data:any ) => {

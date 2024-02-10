@@ -6,7 +6,7 @@ const MoreButton = ({onClick = () => {}}) => {
         marginTop:'39px',
         backgroundColor: 'white',
         color: 'black',
-        width:'335px',
+        width:'343px',
         height: '40px',
         padding:'13px 16px',
         borderRadius: '4px',

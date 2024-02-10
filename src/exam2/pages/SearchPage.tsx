@@ -37,7 +37,7 @@ const NumberResultsStyle = {
     height:'50px',
     width: '115px',
     margin: '0px',
-    padding:'20px 0px',
+    padding:'15px 0px 16px 0px',
     color: 'white',
 }
 const textNumberStyle = {
@@ -68,12 +68,12 @@ const textResultsStyle = {
             <span style={SearchStyle}>
                 <SearchInput setKeyword={setKeyword} />
                     <div style={textPerPageStyle}># of results per page</div>
-                        <div style={NumberResultsStyle}>
+                    <div style={NumberResultsStyle}>
                         <span style={textNumberStyle}>{pageSize}</span>
                         <span style={textResultsStyle}>results</span>
                     </div>
                 <ResultsSlider pageSize={pageSize} setPageSize={setPageSize}/>
-                <Link to={`/exam2/result?pageSize=${pageSize}&keyword=${keyword}`}>
+                <Link to={`/exam2/result?pageSize=${pageSize}&keyword=${keyword}`} >
                     <SearchButton />
                 </Link>
             </span>

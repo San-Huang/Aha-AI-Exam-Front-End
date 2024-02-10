@@ -17,13 +17,13 @@ export const PasswordValidation: React.FC<props> = ({value}) => {
         'Longer than 8 characters'
     ]
     const ListStyle = {
-        width: '311px',
+        width: '310px',
         height: '210px',
         borderRadius: '8px',
         backgroundColor: '#242424',
         color: 'white',
         margin: 'auto',
-        marginTop: '15px',
+        marginTop: '20px',
         boxShadow: '4px 4px 20px 0px rgba(0, 0, 0, 0.30)',
         position: 'flex',
         alignItems:'center',

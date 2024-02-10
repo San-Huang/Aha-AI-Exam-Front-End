@@ -22,13 +22,13 @@ const SearchStyle ={
     flexDirection: 'column' as 'column',
     alignItems: 'flex-start',
     justifyContent: 'center',
-    paddingLeft: '257px'
+    paddingLeft: '337px',
 }
 const ResultStyle = {
     display:'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: '92px',
+    marginTop: '84px',
     paddingBottom: '24px'
 }
 const textStyle: React.CSSProperties = {
