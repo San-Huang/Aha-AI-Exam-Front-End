@@ -34,7 +34,7 @@ export const getFollowing = async (): Promise<Users[]> => {
     }
   };
 
-  export const getResults = async ({page, pageSize, keyword}: any): Promise<Users[]> => {
+  export const getResults = async ({ page, pageSize, keyword }: any): Promise<Users[]> => {
     try {
       const response = await axios.get(`https://avl-frontend-exam.herokuapp.com/api/users/all?page=${page}&pageSize=${pageSize}&keyword=${keyword}`);
       return response.data.data;

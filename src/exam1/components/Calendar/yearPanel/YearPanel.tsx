@@ -1,14 +1,14 @@
-import React,{ FC, useState } from 'react'
-import YearControls from './YearControls'
-import YearTable from './YearTable'
-import { currentYear } from '../DateGetter'
+import React,{ FC, useState } from 'react';
+import YearControls from './YearControls';
+import YearTable from './YearTable';
+import { currentYear } from '../DateGetter';
 
 type Props = {
     onSelect:(value: number) => void;
     selected: number
  }
 
-const YearPanel: FC<Props> = ({onSelect,selected}) =>{
+const YearPanel: FC<Props> = ({ onSelect, selected }) =>{
     
     const [currentYearView, setCurrentYearView] = useState(currentYear)
 
@@ -20,11 +20,17 @@ const YearPanel: FC<Props> = ({onSelect,selected}) =>{
         setCurrentYearView(currentYearView - 20)
       }
 
-
     return (
         <div>
-            <YearControls onPrev={onPrev} onNext={onNext} />
-            <YearTable selected={selected} currentYear={currentYearView} onSelect={onSelect}/>
+            <YearControls 
+                onPrev={onPrev} 
+                onNext={onNext} 
+            />
+            <YearTable 
+                selected={selected} 
+                currentYear={currentYearView} 
+                onSelect={onSelect}
+            />
         </div>
     )
 }

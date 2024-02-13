@@ -1,20 +1,20 @@
 
 import './App.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SearchPage from './exam2/pages/SearchPage';
 import ResultPage from './exam2/pages/ResultPage';
 import TagsPage from './exam2/pages/TagsPage';
-import CalendarPage from './exam1/components/page/CalendarPage';
-import DatePickerPage from './exam1/components/page/DatePickerPage';
-import PasswordPage from './exam1/components/page/PasswordPage';
-import HomePage from './exam1/components/page/HomePage';
+import CalendarPage from './exam1/pages/CalendarPage';
+import DatePickerPage from './exam1/pages/DatePickerPage';
+import PasswordPage from './exam1/pages/PasswordPage';
+import HomePage from './exam1/pages/HomePage';
 
 
-const sampleUser = {
-  id: '1',
-  name: 'John Doe',
-  avater: 'avatar-url',
-  username: 'john_doe',
+const User = {
+  id: 'string',
+  name: 'string',
+  avater: 'string',
+  username: 'string',
   isFollowing: true,
 };
 
@@ -43,11 +43,11 @@ const router = createBrowserRouter([
   },
   {
     path: 'exam2/',
-    element:<SearchPage users={sampleUser}/>
+    element:<SearchPage users={User}/>
   },
   {
     path: 'exam2/result',
-    element:<ResultPage users={sampleUser}/>
+    element:<ResultPage users={User}/>
   },
   {
     path: 'exam2/tags',

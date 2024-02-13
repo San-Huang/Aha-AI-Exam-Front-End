@@ -1,80 +1,35 @@
 import { FC, useState, useEffect } from 'react';
 import TagCard from "../components/TagCard/TagCard";
 import { getTags } from "../api/api";
-import TagsNavBar from "../components/TagsNavBar/TagsNavBar";
-import Loading from '../components/Loading/Loading';
+import TagsNavBar from "../components/NavBar/TagsNavBar";
+import Loading from '../../assets/Loading';
 import { Box } from '@mui/system';
+import * as style from './pagesStyle';
 
 interface TagProps {
-    id: string;
-    name: string;
-    count: number;
+    id: string
+    name: string
+    count: number
   }
   
   interface TagsPageProps {
-    tagProps: TagProps;
+    tagProps: TagProps
   }
 
-const TagsPage: FC<TagsPageProps> = ({tagProps}) => {
+const TagsPage: FC<TagsPageProps> = () => {
 
-const SearchStyle ={
-    display:'flex',
-    flexDirection: 'column' as 'column',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    paddingLeft: '337px',
-}
-const ResultStyle = {
-    display:'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: '84px',
-    paddingBottom: '24px'
-}
-const textStyle: React.CSSProperties = {
-    width: '102px',
-    height: '45px',
-    color: 'white',
-    fontFamily: 'Ubuntu',
-    fontSize: '30px',
-    fontWeight: '400',
-    lineHeight: '45px',
-    letterSpacing: '0.25px',
-    textAlign: 'left',
-}
-const ResultsCardStyle = {
-    width: '846px',
-    height: '100%',
-    display: 'grid',
-    gridTemplateColumns: 'repeat(5, 1fr)',
-    gridGap: '36px 24px',
-    '@media (max-width: 1200px)': {
-      gridTemplateColumns: 'repeat(4, 1fr)', 
-      width: '672px',
-    },
-    '@media (max-width: 992px)': {
-      gridTemplateColumns: 'repeat(3, 1fr)', 
-      width: '498px',
-    },
-    '@media (max-width: 768px)': {
-      gridTemplateColumns: 'repeat(2, 1fr)', 
-      width: '324px',
-    },
-}
+  const [tags, setTags] = useState<TagProps[]>([]);
+  const [loading, setLoading] = useState(false);
 
-
-const [tags, setTags] = useState<TagProps[]>([]);
-const [loading, setLoading] = useState(false);
-
-useEffect(() => {
-    const fetchTags = async () => {
-      const data = await getTags();
-      setTags(data)
-      setLoading(false)
-    };
-    
-    fetchTags()
-  }, []);
+  useEffect(() => {
+      const fetchTags = async () => {
+        const data = await getTags();
+        setTags(data)
+        setLoading(false)
+      };
+      
+      fetchTags()
+    }, []);
 
 
   useEffect(() => {
@@ -99,7 +54,7 @@ useEffect(() => {
         const data = await getTags();
         setTags((prevTags) => [...prevTags, ...data]);
       };
-      //為了讓Loading圖示出現的更清楚而故意延遲0.3秒後才加載資料
+      // Deliberately delayed the loading of data by 0.3 seconds to make the loading icon appear more clearly.
       setTimeout(() => {
         setLoading(false)
         fetchMoreTags();
@@ -110,19 +65,24 @@ useEffect(() => {
     return (
         <div>
             <TagsNavBar />
-            <span style={SearchStyle}>
-                <div style={ResultStyle}>
-                    <span style={textStyle}>Tags</span>
+            <span style={style.tagStyle}>
+                <div style={style.tagResultStyle}>
+                    <span style={style.tagTextStyle}>Tags</span>
                 </div>
-                <Box sx={ResultsCardStyle}>
-                {tags.map((tag) => ( 
-                        <TagCard id={tag.id} name={tag.name} count={tag.count}/>
-                        ))}
-                {loading ? <Loading/> : ''}
+                <Box sx={style.tagResultsCardStyle}>
+                  { tags.map((tag) => ( 
+                      <TagCard 
+                        id={tag.id} 
+                        name={tag.name} 
+                        count={tag.count}
+                      />
+                    ))
+                  }
+                  {loading ? <Loading/> : ''}
                 </Box>
             </span>
         </div>
     )
 }
 
-export default TagsPage
+export default TagsPage;

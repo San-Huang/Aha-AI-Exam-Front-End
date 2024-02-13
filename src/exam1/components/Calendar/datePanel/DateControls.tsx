@@ -1,8 +1,7 @@
-import { FC, useState } from 'react'
-import { prevButton, nextButton } from '../../../../assets/icon'
-import {  currentYear, currentMonthLongString} from '../DateGetter'
-import './DateControls.css'
-import { MonthYear } from '../DateGetter'
+import { FC } from 'react';
+import { prevButton, nextButton } from '../../../../assets/icon';
+import { MonthYear } from '../DateGetter';
+import './DateControls.css';
 
 type Props = {
     monthView: MonthYear
@@ -11,10 +10,10 @@ type Props = {
     onNext: () => void
 }
 
-const DateControls: FC<Props> = ({monthView,titleClick,onPrev,onNext}) => {
+const DateControls: FC<Props> = ({ monthView, titleClick, onPrev, onNext }) => {
 
     const currentMonthYear = new Date(monthView.year, monthView.month, 1)
-    .toLocaleString('en-US', { month: 'long', year: 'numeric'});
+                             .toLocaleString('en-US', { month: 'long', year: 'numeric'})
 
     return (
         <div className='control'>
@@ -36,4 +35,4 @@ const DateControls: FC<Props> = ({monthView,titleClick,onPrev,onNext}) => {
 
 }
 
-export default DateControls
+export default DateControls;
