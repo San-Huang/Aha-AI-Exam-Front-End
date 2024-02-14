@@ -1,6 +1,6 @@
 # Aha AI Exam Front-End
-In order to demonstrate my sincerity and determination to work together with you, I have completed both exams.   
-Thank you for your advice.
+To demonstrate my sincerity and determination to work together with you, I have completed both exams.   
+Looking forward to your guidance.
 
 ## Developmental tools:
 - React.js
