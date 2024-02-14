@@ -14,4 +14,4 @@ https://aha-ai-exam-front-end.vercel.app/
 ## Feedbacks of the Exam
 1. The Avatar link in Api no longer loads the image.
 2. Avatar spelling error in Api, it spells Avater.
-3. On the Results page of Exam 2 in Figam, the third line of the resulting run is spaced differently than the other lines.
+3. On the Results page of Exam 2 in Figam, the third line of the resulting is spaced differently than the other lines.
