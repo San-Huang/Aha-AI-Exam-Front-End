@@ -1,6 +1,6 @@
 # Aha AI Exam Front-End
-In order to demonstrate my sincerity and determination to work together with you, I have completed both exams. Thank you for your advice.
-
+In order to demonstrate my sincerity and determination to work together with you, I have completed both exams. 
+Thank you for your advice.
 
 ## Developmental tools:
 - React.js
@@ -10,7 +10,6 @@ In order to demonstrate my sincerity and determination to work together with you
 
 ## Hosting on Vercel
 https://aha-ai-exam-front-end.vercel.app/
-
 
 ## Feedback on Exam Questions
 1. The Avatar link in Api no longer loads the image.
