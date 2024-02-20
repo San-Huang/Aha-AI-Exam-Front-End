@@ -129,4 +129,8 @@ export const tagResultsCardStyle = {
       gridTemplateColumns: 'repeat(2, 1fr)', 
       width: '324px',
     },
+    '@media (max-width: 680px)': {
+        gridTemplateColumns: 'repeat(1, 1fr)', 
+        width: '220px',
+    },
 }
