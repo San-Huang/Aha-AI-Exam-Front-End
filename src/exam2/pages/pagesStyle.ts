@@ -41,6 +41,7 @@ export const resultsCardStyle = {
     gridGap: '31px 34px',
 }
 
+
 // SearchPage.tsx
 export const textPerPageStyle = {
     margin: '0',
@@ -81,6 +82,7 @@ export const textResultsStyle = {
     fontWeight: '400',
     letterSpacing: '0.15px',
 }
+
 
 // TagsPage.tsx
 export const tagStyle ={
