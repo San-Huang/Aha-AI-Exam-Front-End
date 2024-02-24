@@ -8,6 +8,7 @@ import { FC, useState } from 'react';
 import { Users} from '../api/api';
 import { Link } from 'react-router-dom';
 import * as style from './pagesStyle';
+import Box from "@mui/system/Box";
 
 interface SearchPageProps {
     users: Users
@@ -20,9 +21,11 @@ const SearchPage:FC<SearchPageProps> = ({ users }) => {
    
     return (
         <div>
-            <NavBar />
+            <Box sx={style.tagNavBar}>
+                <NavBar />
+            </Box>
             <FollowTab Users={users} />
-            <span style={style.searchStyle}>
+            <Box sx={style.searchStyle}>
                 <SearchInput setKeyword={setKeyword} />
                     <div style={style.textPerPageStyle}># of results per page</div>
                     <div style={style.numberResultsStyle}>
@@ -33,7 +36,7 @@ const SearchPage:FC<SearchPageProps> = ({ users }) => {
                 <Link to={`/exam2/result?pageSize=${pageSize}&keyword=${keyword}`} style={{ textDecoration: 'none' }}>
                     <SearchButton />
                 </Link>
-            </span>
+            </Box>
         </div>
     )
 }

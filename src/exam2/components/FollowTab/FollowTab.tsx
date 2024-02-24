@@ -114,7 +114,9 @@ const FollowTab:FC<FollowTabProps> = () => {
               <span style={style.followerSpanStyle} >
                   <Follower followers={currentTab === 'Followers' ? followers : following} />
               </span>
-              {loading ? <Loading/> : ''}
+              <Box sx={style.loadingStyle}>
+                {loading ? <Loading/> : ''} 
+              </Box>
           </Box>
       </div>
     )

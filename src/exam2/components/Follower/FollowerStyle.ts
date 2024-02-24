@@ -1,9 +1,13 @@
+export const divStyle = {
+    paddingTop: '96px',
+}
+
 export const followersStyle = {
     width: '343px',
     height: '45px',
     display:'flex',
     alignItems: 'center',
-    paddingBottom: '16px'
+    paddingBottom: '16px',
 }
 
 export const avatarStyle = {

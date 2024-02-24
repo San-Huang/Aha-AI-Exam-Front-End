@@ -12,7 +12,7 @@ interface FollowerProps {
 const Follower:FC<FollowerProps> = ({ followers }) => {
 
     return (
-        <div>
+        <div style={style.divStyle}>
             { followers.map(user => (
                 <div style={style.followersStyle} key={user.id}>
                     <Avatar 

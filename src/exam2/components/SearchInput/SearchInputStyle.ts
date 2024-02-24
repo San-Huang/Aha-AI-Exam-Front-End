@@ -31,8 +31,11 @@ export const searchTitleStyle = {
       height: '60px',
       backgroundColor:'none',
       transition: 'width 0.7s ease',
-      '@media (max-width: 1300px)': {
+      '@media (max-width: 1000px)': {
         width: '500px', 
+      },
+      '@media (max-width: 670px)': {
+        width: '343px', 
       },
       '& fieldset': {
         border: '3px solid rgba(255, 255, 255, 0.50)',
@@ -59,10 +62,10 @@ export const searchTitleStyle = {
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
     margin: '30px 0px',
     transition: 'width 0.7s ease',
-    '@media (max-width: 1300px)': {
+    '@media (max-width: 1000px)': {
       width: '500px',
-      height: '1px', 
-      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-      margin: '30px 0px',
+    },
+    '@media (max-width: 670px)': {
+      width: '343px', 
     },
   };

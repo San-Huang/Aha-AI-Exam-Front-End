@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useState, useEffect, useRef } from 'react';
 import TagCard from "../components/TagCard/TagCard";
 import { getTags } from "../api/api";
 import TagsNavBar from "../components/NavBar/TagsNavBar";
@@ -31,22 +31,24 @@ const TagsPage: FC<TagsPageProps> = () => {
       fetchTags()
     }, []);
 
-
   useEffect(() => {
+    const scrollContainer = document.getElementById('TagBox')
     const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop ===
-        document.documentElement.offsetHeight
-      ) {
-        setLoading(true)
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+        if (
+            scrollContainer
+            && scrollContainer.scrollHeight - scrollContainer.scrollTop 
+            === scrollContainer.clientHeight
+             ) {
+              setLoading(true)
+             }
+        }
+        if (scrollContainer) {
+            scrollContainer.addEventListener('scroll', handleScroll)
+            return () => {
+                scrollContainer.removeEventListener('scroll', handleScroll)
+            }
+        }
+    }, [])
 
   useEffect(() => {
     if (loading) {
@@ -54,22 +56,29 @@ const TagsPage: FC<TagsPageProps> = () => {
         const data = await getTags();
         setTags((prevTags) => [...prevTags, ...data]);
       };
-      // Deliberately delayed the loading of data by 0.3 seconds to make the loading icon appear more clearly.
-      setTimeout(() => {
-        setLoading(false)
-        fetchMoreTags();
-    }, 300); 
+      // Intentionally delayed the loading of data by 0.3 seconds to make the loading icon appear more clearly.
+        setTimeout(() => {
+          setLoading(false)
+          fetchMoreTags();
+      }, 300); 
     }
   }, [loading]);
 
     return (
         <div>
-            <TagsNavBar />
-            <span style={style.tagStyle}>
+            <Box sx={style.tagNavBar}>
+              <TagsNavBar/>
+            </Box>
+            <Box sx={style.tagStyle}>
                 <div style={style.tagResultStyle}>
-                    <span style={style.tagTextStyle}>Tags</span>
+                    <span style={style.tagTextStyle}>
+                      Tags
+                      <Box sx={style.tagLoading}>
+                        {loading ? <Loading/> : ''}
+                      </Box>
+                    </span>
                 </div>
-                <Box sx={style.tagResultsCardStyle}>
+                <Box sx={style.tagResultsCardStyle} id={'TagBox'}>
                   { tags.map((tag) => ( 
                       <TagCard 
                         id={tag.id} 
@@ -78,9 +87,8 @@ const TagsPage: FC<TagsPageProps> = () => {
                       />
                     ))
                   }
-                  {loading ? <Loading/> : ''}
                 </Box>
-            </span>
+            </Box>
         </div>
     )
 }

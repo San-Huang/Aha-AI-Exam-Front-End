@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import FollowTab from "../components/FollowTab/FollowTab";
 import MoreButton from "../components/MoreButton/MoreButton";
 import ResultCard from "../components/ResultCard/ResultCard";
+import { Box } from '@mui/system';
 import Loading from "../../assets/Loading";
 import { Users, getResults } from '../api/api';
 import { leftArrow } from "../../assets/icon"; 
@@ -32,7 +33,7 @@ const ResultPage:FC<SearchPageProps> = ({ users }) => {
             return [...prevResults, ...newData]
         });
         }
-        // Deliberately delayed the loading of data by 0.3 seconds to make the loading icon appear more clearly.
+        // Intentionally delayed the loading of data by 0.3 seconds to make the loading icon appear more clearly.
         setTimeout(() => {
             setLoading(false)
             fetchResults()
@@ -46,16 +47,23 @@ const ResultPage:FC<SearchPageProps> = ({ users }) => {
 
     return (
         <div>
-            <NavBar />
+            <Box sx={style.hiddenNavBar}>
+                <NavBar />
+            </Box>
             <FollowTab Users={users} />
-            <span style={style.searchStyle}>
+            <Box sx={style.resultBoxStyle}>
                 <div style={style.resultStyle}>
                     <Link to='/exam2'>
                         <span style={style.leftArrowStyle}>{leftArrow}</span>
                     </Link>
-                    <span style={style.textStyle}>Results</span>
+                    <span style={style.textStyle}>
+                        Results
+                        <Box sx={style.resultLoading}>
+                        {loading ? <Loading/> : ''}
+                      </Box>
+                    </span>
                 </div>
-                <div style={style.resultsCardStyle}>
+                <Box sx={style.resultsCardStyle}>
                     { results.map((result)=>( 
                         <ResultCard 
                             name={result.name} 
@@ -64,10 +72,9 @@ const ResultPage:FC<SearchPageProps> = ({ users }) => {
                         />
                        ))
                     }
-                </div>
-                    {loading ? (<Loading />) : ''}
+                </Box>
                 <MoreButton onClick={handleClick}/>
-            </span>
+            </Box>
         </div>
     )
 }

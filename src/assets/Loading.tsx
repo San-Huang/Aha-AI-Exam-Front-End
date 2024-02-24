@@ -1,10 +1,10 @@
  const Loading = () => {
 
-    const textStyle = {
-        color:'white',
-        fontFamily: 'Ubuntu',
-        fontWeight: '700',
-    }
+    // const textStyle = {
+    //     color:'white',
+    //     fontFamily: 'Ubuntu',
+    //     fontWeight: '700',
+    // }
 
     return (
       <div>
@@ -23,9 +23,9 @@
                 <circle transform-origin="center" fill="none" opacity=".2" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" cx="100" cy="100" r="70">
                 </circle>
         </svg>
-        <span style={textStyle}>
+        {/* <span style={textStyle}>
             Loading...
-        </span>
+        </span> */}
       </div>
     )
   }

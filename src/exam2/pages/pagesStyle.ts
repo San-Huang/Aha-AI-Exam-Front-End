@@ -1,10 +1,17 @@
 // ResultPage.tsx
-export const searchStyle = {
+export const resultBoxStyle = {
     display:'flex',
     flexDirection: 'column' as 'column',
     alignItems: 'flex-start',
     justifyContent: 'center',
-    paddingLeft: '210px'
+    paddingLeft: '210px',
+    transition: 'padding 0.7s ease',
+    '@media (max-width: 1000px)': {
+        paddingLeft: '160px',
+      },
+      '@media (max-width: 770px)': {
+        paddingLeft: '100px',
+      },
 }
 
 export const resultStyle = {
@@ -36,13 +43,51 @@ export const textStyle: React.CSSProperties = {
 
 export const resultsCardStyle = {
     width: '725px',
+    height: 'calc(100vh - 270px)',
+    overflow: 'auto',
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridGap: '31px 34px',
+    '@media (max-width: 900px)': {
+        gridTemplateColumns: 'repeat(2, 1fr)', 
+        width: '472px',
+      },
+}
+
+export const hiddenNavBar = {
+    '@media (max-width: 770px)': {
+        visibility: 'hidden'
+      },
 }
 
 
+export const resultLoading = {
+    width: '40px',
+    height: '40px',
+    position: 'relative',
+    top: '-40px',
+    left: '110px',
+}
+
+
+
+
 // SearchPage.tsx
+export const searchStyle = {
+    display:'flex',
+    flexDirection: 'column' as 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    paddingLeft: '210px',
+    transition: 'padding 0.7s ease',
+    '@media (max-width: 800px)': {
+        paddingLeft: '150px',
+      },
+      '@media (max-width: 670px)': {
+        paddingLeft: '80px',
+      },
+}
+
 export const textPerPageStyle = {
     margin: '0',
     color: 'white',
@@ -83,7 +128,6 @@ export const textResultsStyle = {
     letterSpacing: '0.15px',
 }
 
-
 // TagsPage.tsx
 export const tagStyle ={
     display:'flex',
@@ -91,7 +135,24 @@ export const tagStyle ={
     alignItems: 'flex-start',
     justifyContent: 'center',
     paddingLeft: '337px',
+    transition: 'padding 0.7s ease',
+    '@media (max-width: 1300px)': {
+        paddingLeft: '230px',
+      },
+      '@media (max-width: 900px)': {
+        paddingLeft: '200px',
+      },
+      '@media (max-width: 670px)': {
+        paddingLeft: '120px',
+      },
 }
+
+export const tagNavBar = {
+    '@media (max-width: 670px)': {
+        visibility: 'hidden',
+      },
+}
+
 
 export const tagResultStyle = {
     display:'flex',
@@ -115,24 +176,30 @@ export const tagTextStyle: React.CSSProperties = {
 
 export const tagResultsCardStyle = {
     width: '846px',
-    height: '100%',
+    height: 'calc(100vh - 200px)',
+    overflow: 'auto',
     display: 'grid',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gridGap: '36px 24px',
-    '@media (max-width: 1200px)': {
+    '@media (max-width: 1100px)': {
       gridTemplateColumns: 'repeat(4, 1fr)', 
       width: '672px',
     },
-    '@media (max-width: 992px)': {
+    '@media (max-width: 900px)': {
       gridTemplateColumns: 'repeat(3, 1fr)', 
       width: '498px',
     },
-    '@media (max-width: 768px)': {
+    '@media (max-width: 670px)': {
       gridTemplateColumns: 'repeat(2, 1fr)', 
       width: '324px',
     },
-    '@media (max-width: 680px)': {
-        gridTemplateColumns: 'repeat(1, 1fr)', 
-        width: '220px',
-    },
+}
+
+
+export const tagLoading = {
+    width: '40px',
+    height: '40px',
+    position: 'relative',
+    top: '-40px',
+    left: '70px',
 }

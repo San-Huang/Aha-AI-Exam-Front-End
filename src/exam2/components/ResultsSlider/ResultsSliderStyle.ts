@@ -6,8 +6,11 @@ export const sliderStyle = {
     width: '725px',
     height:'8px',
     transition: 'width 0.7s ease',
-    '@media (max-width: 1300px)': {
+    '@media (max-width: 1000px)': {
       width: '500px', 
+    },
+    '@media (max-width: 670px)': {
+      width: '343px', 
     },
     '& .MuiSlider-mark': {
       display: 'none',
@@ -41,12 +44,19 @@ export const dividerStyle = {
     width: '725px',
     height: '1px',
     backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    margin: '30px 0px 335px 0px',
-    transition: 'width 0.7s ease',
-    '@media (max-width: 1300px)': {
+    marginTop: '30px',
+    marginBottom: '335px',
+    transition: 'width 0.7s ease, margin 0.7s ease',
+    '@media (max-width: 1000px)': {
       width: '500px',
-      height: '1px', 
-      backgroundColor: 'rgba(255, 255, 255, 0.1)', 
-      margin: '30px 0px 335px 0px',
+    },
+    '@media (max-width: 670px)': {
+      width: '343px', 
+    },
+    '@media (max-height: 830px)': {
+      marginBottom: '200px',
+    },
+    '@media (max-height: 680px)': {
+      marginBottom: '30px',
     },
 }

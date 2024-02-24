@@ -13,6 +13,9 @@ export const boxStyle = {
 
 export const tabsStyle = {
     padding:'16px 0px  32px 0px',
+    backgroundColor: 'rgba(27, 27, 27, 1)',
+    position: 'fixed',
+    zIndex:'999',
     '& .MuiTabs-indicator': {
         backgroundColor: '#fff',
     },
@@ -25,13 +28,14 @@ export const tabStyle = {
     fontFamily: 'Ubuntu',
     fontSize: '16px',
     fontStyle: 'normal',
-    fontWeight: '700',
+    fontWeight: '400',
     lineHeight: '24px',
     letterSpacing: '0.35px',
     textTransform: 'none',
     color: 'rgba(146, 146, 146, 0.87)',
     '&.Mui-selected': {
         color: '#fff',
+        fontWeight: '700',
     },    
 }
 
@@ -40,4 +44,10 @@ export const followerSpanStyle = {
     alignItems: 'center',
     flexDirection: 'column' as 'column',
     gap: '16px',
+}
+
+export const loadingStyle = {
+    width: '50px',
+    height: '50px',
+    margin: 'auto',
 }
